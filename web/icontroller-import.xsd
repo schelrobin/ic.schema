@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:country="http://www.codesynthesis.com/xmlns/xsstl" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:import schemaLocation="http://schema.icontroller.eu/iso3166-country.xsd" namespace="http://www.codesynthesis.com/xmlns/xsstl" />
+    <xs:include schemaLocation="http://schema.icontroller.eu/iso639-language.xsd" />
+    <xs:include schemaLocation="http://schema.icontroller.eu/iso4217-currency.xsd" />
+    <xs:element name="icontroller">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="debtors">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="debtor" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="reference" minOccurs="1" maxOccurs="1">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:minLength value="1" />
+                                                    <xs:whiteSpace value="replace" />
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="name" minOccurs="1" maxOccurs="1">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:minLength value="1" />
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="vat" type="xs:string" minOccurs="0" maxOccurs="1" />
+                                        <xs:element name="address_line1" minOccurs="1" maxOccurs="1">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:minLength value="1" />
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="address_zip" minOccurs="1" maxOccurs="1">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:minLength value="3" />
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="address_city" minOccurs="1" maxOccurs="1">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:minLength value="1" />
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="address_country" type="country:ISO3166CountyCode" minOccurs="1" maxOccurs="1" />
+                                        <xs:element name="tel" type="xs:string" minOccurs="0" maxOccurs="1" />
+                                        <xs:element name="fax" type="xs:string" minOccurs="0" maxOccurs="1" />
+                                        <xs:element name="email" type="xs:string" minOccurs="0" maxOccurs="1" />
+                                        <xs:element name="language" type="ISOLanguageCodeType" minOccurs="1" maxOccurs="1" />
+                                    </xs:sequence>
+                                    <xs:attribute name="reference" use="required">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:minLength value="1" />
+                                                <xs:whiteSpace value="replace" />
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="documents">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="document" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="debtor_reference" type="xs:string" minOccurs="1" maxOccurs="1" />
+                                        <xs:element name="reference" type="xs:string" minOccurs="1" maxOccurs="1" />
+                                        <xs:element name="journal" type="xs:string" minOccurs="1" maxOccurs="1" />
+                                        <xs:element name="denomination" type="xs:decimal" minOccurs="1" maxOccurs="1" />
+                                        <xs:element name="date" type="xs:date" minOccurs="1" maxOccurs="1" />
+                                        <xs:element name="due_date" type="xs:date" minOccurs="0" maxOccurs="1" />
+                                        <xs:element name="currency" type="ISOCurrencyCodeType" minOccurs="1" maxOccurs="1" />
+                                    </xs:sequence>
+                                    <xs:attribute name="debtor_reference" type="xs:string" use="required" />
+                                    <xs:attribute name="reference" type="xs:string" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
