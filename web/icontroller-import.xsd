@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<xs:schema xmlns:country="http://www.codesynthesis.com/xmlns/xsstl" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema targetNamespace="http://schema.icontroller.eu/icontroller-import" xmlns:country="http://www.codesynthesis.com/xmlns/xsstl" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:import schemaLocation="http://schema.icontroller.eu/iso3166-country.xsd" namespace="http://www.codesynthesis.com/xmlns/xsstl" />
     <xs:include schemaLocation="http://schema.icontroller.eu/iso639-language.xsd" />
     <xs:include schemaLocation="http://schema.icontroller.eu/iso4217-currency.xsd" />
