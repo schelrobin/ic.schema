@@ -46,190 +46,190 @@
         </debtor>
     </debtors>
     <documents>
-        <document debtor_reference="CN8001" reference="FVC10800021">
+        <document debtor_reference="CN8001" reference="F10800021">
             <debtor_reference>CN8001</debtor_reference>
-            <reference>FVC10800021</reference>
-            <journal>VC-PIC</journal>
+            <reference>F10800021</reference>
+            <journal>VERK</journal>
             <denomination>3000</denomination>
             <date>2010-06-30</date>
             <due_date>2010-07-01</due_date>
             <currency>EUR</currency>
         </document>
-        <document debtor_reference="CN8001" reference="FVC10800023">
+        <document debtor_reference="CN8001" reference="F10800023">
             <debtor_reference>CN8001</debtor_reference>
-            <reference>FVC10800023</reference>
-            <journal>VC-PIC</journal>
+            <reference>F10800023</reference>
+            <journal>VERK</journal>
             <denomination>1400</denomination>
             <date>2010-06-30</date>
             <due_date>2010-07-01</due_date>
             <currency>EUR</currency>
         </document>
-        <document debtor_reference="CN8002" reference="FVC10800039">
+        <document debtor_reference="CN8002" reference="F10800039">
             <debtor_reference>CN8002</debtor_reference>
-            <reference>FVC10800039</reference>
-            <journal>VC-PIC</journal>
+            <reference>F10800039</reference>
+            <journal>VERK</journal>
             <denomination>48400</denomination>
             <date>2010-06-30</date>
             <due_date>2010-07-01</due_date>
             <currency>EUR</currency>
         </document>
-        <document debtor_reference="CN8003" reference="FVC10800040">
+        <document debtor_reference="CN8003" reference="F10800040">
             <debtor_reference>CN8003</debtor_reference>
-            <reference>FVC10800040</reference>
-            <journal>VC-PIC</journal>
+            <reference>F10800040</reference>
+            <journal>VERK</journal>
             <denomination>41151.57</denomination>
             <date>2010-06-30</date>
             <due_date>2010-07-01</due_date>
             <currency>EUR</currency>
         </document>
-        <document debtor_reference="CN8001" reference="FVC10800041">
+        <document debtor_reference="CN8001" reference="F10800041">
             <debtor_reference>CN8001</debtor_reference>
-            <reference>FVC10800041</reference>
-            <journal>VC-PIC</journal>
+            <reference>F10800041</reference>
+            <journal>VERK</journal>
             <denomination>1200</denomination>
             <date>2010-07-31</date>
             <due_date>2010-08-01</due_date>
             <currency>EUR</currency>
         </document>
-        <document debtor_reference="CN8002" reference="FVC10800045">
+        <document debtor_reference="CN8002" reference="F10800045">
             <debtor_reference>CN8002</debtor_reference>
-            <reference>FVC10800045</reference>
-            <journal>VC-PIC</journal>
+            <reference>F10800045</reference>
+            <journal>VERK</journal>
             <denomination>21780</denomination>
             <date>2010-09-30</date>
             <due_date>2010-11-01</due_date>
             <currency>EUR</currency>
         </document>
-        <document debtor_reference="CN8004" reference="FVC10800046">
+        <document debtor_reference="CN8004" reference="F10800046">
             <debtor_reference>CN8004</debtor_reference>
-            <reference>FVC10800046</reference>
-            <journal>VC-PIC</journal>
+            <reference>F10800046</reference>
+            <journal>VERK</journal>
             <denomination>0</denomination>
             <date>2010-09-30</date>
             <due_date>2010-10-01</due_date>
             <currency>USD</currency>
         </document>
-        <document debtor_reference="CN8004" reference="FVC10800046">
+        <document debtor_reference="CN8004" reference="F10800046">
             <debtor_reference>CN8004</debtor_reference>
-            <reference>FVC10800046</reference>
-            <journal>VC-PIC</journal>
+            <reference>F10800046</reference>
+            <journal>VERK</journal>
             <denomination>1000</denomination>
             <date>2010-09-30</date>
             <due_date>2010-10-01</due_date>
             <currency>USD</currency>
         </document>
-        <document debtor_reference="CN8004" reference="FVC10800047">
+        <document debtor_reference="CN8004" reference="F10800047">
             <debtor_reference>CN8004</debtor_reference>
-            <reference>FVC10800047</reference>
-            <journal>VC-PIC</journal>
+            <reference>F10800047</reference>
+            <journal>VERK</journal>
             <denomination>0</denomination>
             <date>2010-09-30</date>
             <due_date>2010-10-01</due_date>
             <currency>USD</currency>
         </document>
-        <document debtor_reference="CN8004" reference="FVC10800047">
+        <document debtor_reference="CN8004" reference="F10800047">
             <debtor_reference>CN8004</debtor_reference>
-            <reference>FVC10800047</reference>
-            <journal>VC-PIC</journal>
+            <reference>F10800047</reference>
+            <journal>VERK</journal>
             <denomination>5000</denomination>
             <date>2010-09-30</date>
             <due_date>2010-10-01</due_date>
             <currency>USD</currency>
         </document>
-        <document debtor_reference="CN8001" reference="FVC10800051">
+        <document debtor_reference="CN8001" reference="F10800051">
             <debtor_reference>CN8001</debtor_reference>
-            <reference>FVC10800051</reference>
-            <journal>VC-PIC</journal>
+            <reference>F10800051</reference>
+            <journal>VERK</journal>
             <denomination>11200</denomination>
             <date>2010-09-30</date>
             <due_date>2010-10-01</due_date>
             <currency>EUR</currency>
         </document>
-        <document debtor_reference="CN8004" reference="FVC10800054">
+        <document debtor_reference="CN8004" reference="F10800054">
             <debtor_reference>CN8004</debtor_reference>
-            <reference>FVC10800054</reference>
-            <journal>VC-PIC</journal>
+            <reference>F10800054</reference>
+            <journal>VERK</journal>
             <denomination>13000</denomination>
             <date>2010-09-30</date>
             <due_date>2010-10-01</due_date>
             <currency>EUR</currency>
         </document>
-        <document debtor_reference="CN8001" reference="FVC10800070">
+        <document debtor_reference="CN8001" reference="F10800070">
             <debtor_reference>CN8001</debtor_reference>
-            <reference>FVC10800070</reference>
-            <journal>VC-PIC</journal>
+            <reference>F10800070</reference>
+            <journal>VERK</journal>
             <denomination>6050</denomination>
             <date>2010-11-30</date>
             <due_date>2010-12-01</due_date>
             <currency>EUR</currency>
         </document>
-        <document debtor_reference="CN8001" reference="FVC10800069">
+        <document debtor_reference="CN8001" reference="F10800069">
             <debtor_reference>CN8001</debtor_reference>
-            <reference>FVC10800069</reference>
-            <journal>VC-PIC</journal>
+            <reference>F10800069</reference>
+            <journal>VERK</journal>
             <denomination>5000</denomination>
             <date>2010-11-30</date>
             <due_date>2010-12-01</due_date>
             <currency>EUR</currency>
         </document>
-        <document debtor_reference="CN8002" reference="FVC10800068">
+        <document debtor_reference="CN8002" reference="F10800068">
             <debtor_reference>CN8002</debtor_reference>
-            <reference>FVC10800068</reference>
-            <journal>VC-PIC</journal>
+            <reference>F10800068</reference>
+            <journal>VERK</journal>
             <denomination>26000</denomination>
             <date>2010-11-30</date>
             <due_date>2010-12-01</due_date>
             <currency>EUR</currency>
         </document>
-        <document debtor_reference="CN8001" reference="FVC10800065">
+        <document debtor_reference="CN8001" reference="F10800065">
             <debtor_reference>CN8001</debtor_reference>
-            <reference>FVC10800065</reference>
-            <journal>VC-PIC</journal>
+            <reference>F10800065</reference>
+            <journal>VERK</journal>
             <denomination>23735.84</denomination>
             <date>2010-09-30</date>
             <due_date>2010-10-01</due_date>
             <currency>EUR</currency>
         </document>
-        <document debtor_reference="CN8001" reference="FVC10800064">
+        <document debtor_reference="CN8001" reference="F10800064">
             <debtor_reference>CN8001</debtor_reference>
-            <reference>FVC10800064</reference>
-            <journal>VC-PIC</journal>
+            <reference>F10800064</reference>
+            <journal>VERK</journal>
             <denomination>0</denomination>
             <date>2010-09-30</date>
             <due_date>2010-10-01</due_date>
             <currency>CHF</currency>
         </document>
-        <document debtor_reference="CN8001" reference="FVC10800064">
+        <document debtor_reference="CN8001" reference="F10800064">
             <debtor_reference>CN8001</debtor_reference>
-            <reference>FVC10800064</reference>
-            <journal>VC-PIC</journal>
+            <reference>F10800064</reference>
+            <journal>VERK</journal>
             <denomination>594.17</denomination>
             <date>2010-09-30</date>
             <due_date>2010-10-01</due_date>
             <currency>CHF</currency>
         </document>
-        <document debtor_reference="CN8001" reference="FVC10800058">
+        <document debtor_reference="CN8001" reference="F10800058">
             <debtor_reference>CN8001</debtor_reference>
-            <reference>FVC10800058</reference>
-            <journal>VC-PIC</journal>
+            <reference>F10800058</reference>
+            <journal>VERK</journal>
             <denomination>588</denomination>
             <date>2010-09-30</date>
             <due_date>2010-10-01</due_date>
             <currency>EUR</currency>
         </document>
-        <document debtor_reference="CN8002" reference="FVC10800057">
+        <document debtor_reference="CN8002" reference="F10800057">
             <debtor_reference>CN8002</debtor_reference>
-            <reference>FVC10800057</reference>
-            <journal>VC-PIC</journal>
+            <reference>F10800057</reference>
+            <journal>VERK</journal>
             <denomination>3900</denomination>
             <date>2010-09-30</date>
             <due_date>2010-10-01</due_date>
             <currency>EUR</currency>
         </document>
-        <document debtor_reference="CN8004" reference="FVC10800055">
+        <document debtor_reference="CN8004" reference="F10800055">
             <debtor_reference>CN8004</debtor_reference>
-            <reference>FVC10800055</reference>
-            <journal>VC-PIC</journal>
+            <reference>F10800055</reference>
+            <journal>VERK</journal>
             <denomination>13000</denomination>
             <date>2010-09-30</date>
             <due_date>2010-10-01</due_date>
