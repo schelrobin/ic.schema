@@ -8,6 +8,7 @@
             <address_zip>1000</address_zip>
             <address_city>Brussel</address_city>
             <address_country>BE</address_country>
+            <fax>+32 0 000 00 00</fax>
             <language>fr</language>
         </debtor>
         <debtor reference="CN8004">
@@ -28,6 +29,7 @@
             <address_zip>80000</address_zip>
             <address_city>MONTAUBAN</address_city>
             <address_country>FR</address_country>
+            <email>test2@example.com</email>
             <language>fr</language>
             <credit_limit>100000</credit_limit>
         </debtor>
@@ -38,6 +40,8 @@
             <address_zip>2000</address_zip>
             <address_city>Antwerpen</address_city>
             <address_country>BE</address_country>
+            <tel>+32 0 000 00 00 00</tel>
+            <email>test@example.org</email>
             <language>nl</language>
         </debtor>
     </debtors>
