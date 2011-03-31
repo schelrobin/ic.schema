@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
 			xmlns="http://www.wipo.int/standards/XMLSchema/common"
 			version="1.0"
 			elementFormDefault="qualified"
-			attributeFormDefault="unqualified">
+			attributeFormDefault="unqualified"
+            targetNamespace="http://schema.icontroller.eu/iso639">
 
 
 <!-- ====================================================================== -->

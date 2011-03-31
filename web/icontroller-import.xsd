@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<xs:schema targetNamespace="http://schema.icontroller.eu/icontroller-import" xmlns:country="http://www.codesynthesis.com/xmlns/xsstl" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema targetNamespace="http://schema.icontroller.eu/icontroller-import" xmlns:country="http://www.codesynthesis.com/xmlns/xsstl" xmlns:language="http://schema.icontroller.eu/iso639" xmlns:currency="http://schema.icontroller.eu/iso4217" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:import schemaLocation="http://schema.icontroller.eu/iso3166-country.xsd" namespace="http://www.codesynthesis.com/xmlns/xsstl" />
-    <xs:include schemaLocation="http://schema.icontroller.eu/iso639-language.xsd" />
-    <xs:include schemaLocation="http://schema.icontroller.eu/iso4217-currency.xsd" />
+    <xs:import schemaLocation="http://schema.icontroller.eu/iso639-language.xsd" namespace="http://schema.icontroller.eu/iso639" />
+    <xs:import schemaLocation="http://schema.icontroller.eu/iso4217-currency.xsd" namespace="http://schema.icontroller.eu/iso4217" />
     <xs:element name="icontroller">
         <xs:complexType>
             <xs:sequence>
@@ -53,7 +53,7 @@
                                         <xs:element name="tel" type="xs:string" minOccurs="0" maxOccurs="1" />
                                         <xs:element name="fax" type="xs:string" minOccurs="0" maxOccurs="1" />
                                         <xs:element name="email" type="xs:string" minOccurs="0" maxOccurs="1" />
-                                        <xs:element name="language" type="ISOLanguageCodeType" minOccurs="1" maxOccurs="1" />
+                                        <xs:element name="language" type="language:ISOLanguageCodeType" minOccurs="1" maxOccurs="1" />
                                         <xs:element name="credit_limit" type="xs:decimal" minOccurs="0" maxOccurs="1" />
                                     </xs:sequence>
                                     <xs:attribute name="reference" use="required">
@@ -81,7 +81,7 @@
                                         <xs:element name="denomination" type="xs:decimal" minOccurs="1" maxOccurs="1" />
                                         <xs:element name="date" type="xs:date" minOccurs="1" maxOccurs="1" />
                                         <xs:element name="due_date" type="xs:date" minOccurs="0" maxOccurs="1" />
-                                        <xs:element name="currency" type="ISOCurrencyCodeType" minOccurs="1" maxOccurs="1" />
+                                        <xs:element name="currency" type="currency:ISOCurrencyCodeType" minOccurs="1" maxOccurs="1" />
                                     </xs:sequence>
                                     <xs:attribute name="debtor_reference" type="xs:string" use="required" />
                                     <xs:attribute name="reference" type="xs:string" use="required" />
