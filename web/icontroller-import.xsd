@@ -55,7 +55,16 @@
                                         <xs:element name="fax" type="xs:string" minOccurs="0" maxOccurs="1" />
                                         <xs:element name="email" type="xs:string" minOccurs="0" maxOccurs="1" />
                                         <xs:element name="language" type="language:ISOLanguageCodeType" minOccurs="1" maxOccurs="1" />
+                                        <xs:element name="code" type="xs:string" minOccurs="0" maxOccurs="1" />
+                                        <xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1" />
+                                        <xs:element name="representative" type="xs:string" minOccurs="0" maxOccurs="1" />
+                                        <xs:element name="credit_score" type="xs:positiveInteger" minOccurs="0" maxOccurs="1" />
+                                        <xs:element name="credit_insurance" type="xs:boolean" minOccurs="0" maxOccurs="1" />
                                         <xs:element name="credit_limit" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+                                        <xs:element name="internal_limit" type="xs:decimal" minOccurs="0" maxOccurs="1" />
+                                        <xs:element name="birthdate" type="xs:byte" minOccurs="0" maxOccurs="1" />
+                                        <xs:element name="birthplace" type="xs:string" minOccurs="0" maxOccurs="1" />
+                                        <xs:element name="national_number" type="xs:positiveInteger" minOccurs="0" maxOccurs="1" />
                                     </xs:sequence>
                                     <xs:attribute name="reference" use="required">
                                         <xs:simpleType>
