@@ -12,7 +12,7 @@
                         <xs:sequence>
                             <xs:element name="debtor" maxOccurs="unbounded">
                                 <xs:complexType>
-                                    <xs:sequence>
+                                    <xs:all>
                                         <xs:element name="reference" minOccurs="1" maxOccurs="1">
                                             <xs:simpleType>
                                                 <xs:restriction base="xs:string">
@@ -65,7 +65,26 @@
                                         <xs:element name="birthdate" type="xs:byte" minOccurs="0" maxOccurs="1" />
                                         <xs:element name="birthplace" type="xs:string" minOccurs="0" maxOccurs="1" />
                                         <xs:element name="national_number" type="xs:positiveInteger" minOccurs="0" maxOccurs="1" />
-                                    </xs:sequence>
+                                        <xs:element name="contacts" minOccurs="0" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="contact">
+                                                        <xs:complexType>
+                                                            <xs:all>
+                                                                <xs:element name="reference" type="xs:string" minOccurs="1" maxOccurs="1" />
+                                                                <xs:element name="tel" type="xs:string" minOccurs="0" maxOccurs="1" />
+                                        <xs:element name="fax" type="xs:string" minOccurs="0" maxOccurs="1" />
+                                        <xs:element name="email" type="xs:string" minOccurs="0" maxOccurs="1" />
+                                        <xs:element name="language" type="language:ISOLanguageCodeType" minOccurs="1" maxOccurs="1" />
+                                        
+                                                            </xs:all>
+                                                            <xs:attribute name="reference" type="xs:string" use="required" />
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:all>
                                     <xs:attribute name="reference" use="required">
                                         <xs:simpleType>
                                             <xs:restriction base="xs:string">
@@ -84,7 +103,7 @@
                         <xs:sequence>
                             <xs:element name="document" maxOccurs="unbounded">
                                 <xs:complexType>
-                                    <xs:sequence>
+                                    <xs:all>
                                         <xs:element name="debtor_reference" type="xs:string" minOccurs="1" maxOccurs="1" />
                                         <xs:element name="reference" type="xs:string" minOccurs="1" maxOccurs="1" />
                                         <xs:element name="journal" type="xs:string" minOccurs="1" maxOccurs="1" />
@@ -92,8 +111,28 @@
                                         <xs:element name="date" type="xs:date" minOccurs="1" maxOccurs="1" />
                                         <xs:element name="due_date" type="xs:date" minOccurs="0" maxOccurs="1" />
                                         <xs:element name="currency" type="currency:ISOCurrencyCodeType" minOccurs="1" maxOccurs="1" />
-                                    </xs:sequence>
+                                    </xs:all>
                                     <xs:attribute name="debtor_reference" type="xs:string" use="required" />
+                                    <xs:attribute name="reference" type="xs:string" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="representatives" minOccurs="0" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="representative">
+                                <xs:complexType>
+                                    <xs:all>
+                                        <xs:element name="reference" type="xs:string" minOccurs="1" maxOccurs="1" />
+                                        <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1" />
+                                        <xs:element name="email" type="xs:string" minOccurs="0" maxOccurs="1" />
+                                        <xs:element name="tel" type="xs:string" minOccurs="0" maxOccurs="1" />
+                                        <xs:element name="fax" type="xs:string" minOccurs="0" maxOccurs="1" />
+                                        <xs:element name="language" type="language:ISOLanguageCodeType" minOccurs="1" maxOccurs="1" />
+                                        
+                                    </xs:all>
                                     <xs:attribute name="reference" type="xs:string" use="required" />
                                 </xs:complexType>
                             </xs:element>

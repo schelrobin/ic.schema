@@ -10,6 +10,7 @@
             <address_country>BE</address_country>
             <fax>+32 0 000 00 00</fax>
             <language>fr</language>
+            <representative>repr1</representative>
         </debtor>
         <debtor reference="CN8004">
             <reference>CN8004</reference>
@@ -236,4 +237,11 @@
             <currency>EUR</currency>
         </document>
     </documents>
+    <representatives>
+        <representative reference="repr1">
+            <reference>repr1</reference>
+            <name>Test Vertegenwoordiger</name>
+            <email>test@example.org</email>
+		</representative>
+	</representatives>
 </icontroller>
