@@ -22,6 +22,13 @@
             <address_country>SG</address_country>
             <language>en</language>
             <credit_limit>1000</credit_limit>
+            <contacts>
+                <contact reference="test_contact1">
+                    <reference>test_contact1</reference>
+                    <language>en</language>
+                    <fax>+1 00 0000 000 00 00</fax>
+				</contact>
+			</contacts>
         </debtor>
         <debtor reference="CN8005">
             <reference>CN8005</reference>
@@ -242,6 +249,7 @@
             <reference>repr1</reference>
             <name>Test Vertegenwoordiger</name>
             <email>test@example.org</email>
+            <language>nl</language>
 		</representative>
 	</representatives>
 </icontroller>
