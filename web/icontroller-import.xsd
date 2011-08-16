@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<!--Created with Liquid XML Studio Developer Edition (Trial) 9.0.11.3078 (http://www.liquid-technologies.com)-->
 <xs:schema xmlns:import-helper="http://schema.icontroller.eu/import-helper" xmlns:language="http://schema.icontroller.eu/iso639" xmlns:currency="http://schema.icontroller.eu/iso4217" xmlns:country="http://www.codesynthesis.com/xmlns/xsstl" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://schema.icontroller.eu/icontroller-import" xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:import schemaLocation="http://schema.icontroller.eu/iso3166-country.xsd" namespace="http://www.codesynthesis.com/xmlns/xsstl" />
     <xs:import schemaLocation="http://schema.icontroller.eu/iso639-language.xsd" namespace="http://schema.icontroller.eu/iso639" />
@@ -59,6 +58,7 @@
                                         <xs:element name="code" type="xs:string" minOccurs="0" maxOccurs="1" />
                                         <xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1" />
                                         <xs:element name="representative" type="xs:string" minOccurs="0" maxOccurs="1" />
+                                        <xs:element name="agent" type="xs:string" minOccurs="0" maxOccurs="1" />
                                         <xs:element name="credit_score" type="xs:positiveInteger" minOccurs="0" maxOccurs="1" />
                                         <xs:element name="credit_insurance" type="xs:boolean" minOccurs="0" maxOccurs="1" />
                                         <xs:element name="credit_limit" type="xs:decimal" minOccurs="0" maxOccurs="1" />
