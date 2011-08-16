@@ -109,9 +109,13 @@
                                         <xs:element name="reference" type="xs:string" minOccurs="1" maxOccurs="1" />
                                         <xs:element name="journal" type="xs:string" minOccurs="1" maxOccurs="1" />
                                         <xs:element name="denomination" type="xs:decimal" minOccurs="1" maxOccurs="1" />
+                                        <xs:element name="original_denomination" type="xs:decimal" minOccurs="1" maxOccurs="1" />
                                         <xs:element name="date" type="xs:date" minOccurs="1" maxOccurs="1" />
                                         <xs:element name="due_date" type="xs:date" minOccurs="0" maxOccurs="1" />
                                         <xs:element name="currency" type="currency:ISOCurrencyCodeType" minOccurs="1" maxOccurs="1" />
+					<xs:element name="comment" type="xs:string" minOccurs="0" maxOccurs="1" />
+					<xs:element name="extra_comment" type="xs:string" minOccurs="0" maxOccurs="1" />
+					<xs:element name="project" type="xs:string" minOccurs="0" maxOccurs="1" />
                                     </xs:all>
                                     <xs:attribute name="debtor_reference" type="xs:string" use="required" />
                                     <xs:attribute name="reference" type="xs:string" use="required" />
