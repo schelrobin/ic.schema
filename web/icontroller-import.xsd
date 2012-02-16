@@ -56,6 +56,7 @@
                                         <xs:element name="email" type="xs:string" minOccurs="0" maxOccurs="1" />
                                         <xs:element name="language" type="language:ISOLanguageCodeType" minOccurs="1" maxOccurs="1" />
                                         <xs:element name="code" type="xs:string" minOccurs="0" maxOccurs="1" />
+                                        <xs:element name="procedure" type="xs:string" minOccurs="0" maxOccurs="1" />
                                         <xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1" />
                                         <xs:element name="representative" type="xs:string" minOccurs="0" maxOccurs="1" />
                                         <xs:element name="agent" type="xs:string" minOccurs="0" maxOccurs="1" />
@@ -66,7 +67,14 @@
                                         <xs:element name="birthdate" type="xs:byte" minOccurs="0" maxOccurs="1" />
                                         <xs:element name="birthplace" type="xs:string" minOccurs="0" maxOccurs="1" />
                                         <xs:element name="national_number" type="xs:positiveInteger" minOccurs="0" maxOccurs="1" />
-                                        <xs:element name="contacts" minOccurs="0" maxOccurs="1">
+                                        <xs:element name="portfolios" minOccurs="0" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="portfolio" type="xs:string" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+										<xs:element name="contacts" minOccurs="0" maxOccurs="1">
                                             <xs:complexType>
                                                 <xs:sequence>
                                                     <xs:element name="contact">
@@ -77,11 +85,46 @@
                                                                 <xs:element name="fax" type="xs:string" minOccurs="0" maxOccurs="1" />
                                                                 <xs:element name="email" type="xs:string" minOccurs="0" maxOccurs="1" />
                                                                 <xs:element name="language" type="language:ISOLanguageCodeType" minOccurs="1" maxOccurs="1" />
+                                                                <xs:element name="code" type="xs:string" minOccurs="0" maxOccurs="1" />
+                                                                <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1" />
                                                             </xs:all>
                                                             <xs:attribute name="reference" type="xs:string" use="required" />
                                                         </xs:complexType>
                                                     </xs:element>
                                                 </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+										<xs:element name="fields" minOccurs="0" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:all>
+                                                    <xs:element name="string">
+                                                        <xs:complexType>
+															<xs:simpleContent>
+																<xs:extention base="xs:string">
+																	<xs:attribute name="reference" type="xs:string" use="required" />
+																</xs:extention>
+															</xs:simpleContent>
+                                                         </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="date">
+                                                        <xs:complexType>
+															<xs:simpleContent>
+																<xs:extention base="xs:date">
+																	<xs:attribute name="reference" type="xs:string" use="required" />
+																</xs:extention>
+															</xs:simpleContent>
+                                                         </xs:complexType>
+                                                    </xs:element>
+													<xs:element name="number">
+                                                        <xs:complexType>
+															<xs:simpleContent>
+																<xs:extention base="xs:decimal">
+																	<xs:attribute name="reference" type="xs:string" use="required" />
+																</xs:extention>
+															</xs:simpleContent>
+                                                         </xs:complexType>
+                                                    </xs:element>
+                                                </xs:all>
                                             </xs:complexType>
                                         </xs:element>
                                         <xs:element name="dispute_manager" type="xs:string" minOccurs="0" maxOccurs="1" />
@@ -113,9 +156,10 @@
                                         <xs:element name="date" type="xs:date" minOccurs="1" maxOccurs="1" />
                                         <xs:element name="due_date" type="xs:date" minOccurs="0" maxOccurs="1" />
                                         <xs:element name="currency" type="currency:ISOCurrencyCodeType" minOccurs="1" maxOccurs="1" />
-					<xs:element name="comment" type="xs:string" minOccurs="0" maxOccurs="1" />
-					<xs:element name="extra_comment" type="xs:string" minOccurs="0" maxOccurs="1" />
-					<xs:element name="project" type="xs:string" minOccurs="0" maxOccurs="1" />
+										<xs:element name="comment" type="xs:string" minOccurs="0" maxOccurs="1" />
+										<xs:element name="extra_comment" type="xs:string" minOccurs="0" maxOccurs="1" />
+										<xs:element name="project" type="xs:string" minOccurs="0" maxOccurs="1" />
+										<xs:element name="payment_method" type="xs:string" minOccurs="0" maxOccurs="1" />
                                     </xs:all>
                                     <xs:attribute name="debtor_reference" type="xs:string" use="required" />
                                     <xs:attribute name="reference" type="xs:string" use="required" />
