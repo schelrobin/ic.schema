@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://schema.icontroller.eu/rrn/rrnrequest"
+            xmlns:tns="http://schema.icontroller.eu/rrn/rrnrequest"
+            elementFormDefault="qualified">
+    <xsd:element name="rrnrequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="tns:agency"/>
+                <xsd:element name="rrn">
+                    <xsd:simpleType>
+                        <xsd:restriction base="xsd:string"/>
+                    </xsd:simpleType>
+                </xsd:element>
+                <xsd:choice>
+                    <xsd:element ref="tns:invoices"/>
+                    <xsd:element ref="tns:debiteur"/>
+                </xsd:choice>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="agency" type="tns:agency"></xsd:element>
+    <xsd:element name="debiteur" type="tns:debiteur"></xsd:element>
+    <xsd:element name="invoices" type="tns:invoices"/>
+    <xsd:element name="invoice" type="tns:invoice"/>
+
+    <xsd:complexType name="agency">
+        <xsd:sequence>
+            <xsd:element name="id">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:unsignedLong"/>
+                </xsd:simpleType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="debiteur">
+        <xsd:sequence>
+            <xsd:element name="firstname"  type="xsd:string"/>
+            <xsd:element name="lastname"  type="xsd:string" />
+            <xsd:element name="birthdate"  type="xsd:date" />
+            <xsd:element name="birthplace" type="xsd:string" />
+            <xsd:element name="address" type="xsd:string"/>
+            <xsd:element name="postal" type="xsd:string" />
+            <xsd:element name="city" type="xsd:string"/>
+            <xsd:element name="phone" type="xsd:string"  maxOccurs="1" minOccurs="0"/>
+            <xsd:element name="fax" type="xsd:string"  maxOccurs="1" minOccurs="0"/>
+            <xsd:element name="email" type="xsd:string"  maxOccurs="1" minOccurs="0"/>
+            <xsd:element name="country" type="xsd:string"  maxOccurs="1" minOccurs="0"/>
+            <xsd:element name="language" type="xsd:string"  maxOccurs="1" minOccurs="0"/>
+            <xsd:element name="vat" type="xsd:string"  maxOccurs="1" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+        <xsd:complexType name="invoices">
+        <xsd:sequence>
+            <xsd:element ref="tns:invoice" maxOccurs="unbounded" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="invoice">
+        <xsd:sequence>
+            <xsd:element name="id" type="xsd:unsignedInt"/>
+            <xsd:element name="afbetalingsplan" type="xsd:unsignedInt"/>
+            <xsd:element name="betaald">
+                <xsd:simpleType>
+                    <xsd:restriction  base="xsd:string">
+                        <xsd:enumeration value="J"/>
+                        <xsd:enumeration value="N"/>
+                        </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>
+

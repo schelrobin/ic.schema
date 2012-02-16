@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://schema.icontroller.eu/rrn/rrnresponse"
+            xmlns:tns="http://schema.icontroller.eu/rrn/rrnresponse"
+            elementFormDefault="qualified">
+    <xsd:element name="rrnresponse">
+        <xsd:complexType>
+            <xsd:choice>
+                <xsd:element ref="tns:debiteurs" />
+                <xsd:element ref="tns:status"/>
+            </xsd:choice>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="status" type="tns:status"/>
+    <xsd:element name="debiteurs" type="tns:debiteurs"/>
+    <xsd:element name="debiteur" type="tns:debiteur"/>
+    <xsd:element name="invoices" type="tns:invoices"/>
+    <xsd:element name="invoice" type="tns:invoice"/>
+    <xsd:element name="history" type="tns:history"/>
+    <xsd:element name="agency" type="tns:agency"/>
+    <xsd:complexType name="status" >
+        <xsd:sequence>
+            <xsd:element name="feedback" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="debiteurs" >
+        <xsd:sequence>
+            <xsd:element ref="tns:debiteur" maxOccurs="unbounded" minOccurs="0" />
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="debiteur" >
+        <xsd:sequence>
+            <xsd:element name="id" type="xsd:unsignedInt"/>
+            <xsd:element name="client" type="xsd:string"/>
+            <xsd:element name="reference" type="xsd:string"/>
+            <xsd:element name="name" type="xsd:string"/>
+            <xsd:element name="address" type="xsd:string"/>
+            <xsd:element name="postal" type="xsd:string"/>
+            <xsd:element name="city" type="xsd:string"/>
+            <xsd:element name="phone" type="xsd:string"/>
+            <xsd:element name="fax" type="xsd:string"/>
+            <xsd:element name="email" type="xsd:string"/>
+            <xsd:element name="country" type="xsd:string"/>
+            <xsd:element name="language" type="xsd:string"/>
+            <xsd:element name="vat" type="xsd:string"/>
+            <xsd:element name="date" type="xsd:string"/>
+            <xsd:element name="description" type="xsd:string"/>
+            <xsd:element name="currency" type="xsd:string"/>
+            <xsd:element name="birthday" type="xsd:date"/>
+            <xsd:element name="birthplace" type="xsd:string"/>
+            <xsd:element name="innr" type="xsd:string"/>
+            <xsd:element name="archived" type="xsd:unsignedInt"/>
+            <xsd:element name="open" type="xsd:unsignedInt"/>
+            <xsd:element name="payplan" type="xsd:unsignedInt"/>
+            <xsd:element ref="tns:invoices" />
+            <xsd:element ref="tns:history"/>
+        </xsd:sequence>
+
+    </xsd:complexType>
+    <xsd:complexType name="invoices">
+        <xsd:sequence>
+            <xsd:element ref="tns:invoice" maxOccurs="unbounded" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="invoice">
+        <xsd:sequence>
+            <xsd:element name="id" type="xsd:unsignedInt"/>
+            <xsd:element name="company_id" type="xsd:unsignedLong"/>
+            <xsd:element name="company" type="xsd:string"/>
+            <xsd:element name="datum" type="xsd:date"/>
+            <xsd:element name="vervaldag" >
+                <xsd:simpleType>
+                    <xsd:restriction  base="xsd:date"/>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="bedrag" >
+                <xsd:simpleType>
+                    <xsd:restriction  base="xsd:double"/>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="extrakost"  type="xsd:double"/>
+            <xsd:element name="document" >
+                <xsd:simpleType>
+                    <xsd:restriction  base="xsd:string"/>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="status" >
+                <xsd:simpleType>
+                    <xsd:restriction  base="xsd:string"/>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="mandaat" >
+                <xsd:simpleType>
+                    <xsd:restriction  base="xsd:string"/>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="omschrijving" >
+                <xsd:simpleType>
+                    <xsd:restriction  base="xsd:string"/>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="dso" >
+                <xsd:simpleType>
+                    <xsd:restriction  base="xsd:string"/>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="updated" >
+                <xsd:simpleType>
+                    <xsd:restriction  base="xsd:string"/>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="currency" >
+                <xsd:simpleType>
+                    <xsd:restriction  base="xsd:string"/>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="dispuutcode" >
+                <xsd:simpleType>
+                    <xsd:restriction  base="xsd:string"/>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="teruitbestedingscode" >
+                <xsd:simpleType>
+                    <xsd:restriction  base="xsd:string"/>
+                </xsd:simpleType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="history">
+        <xsd:sequence>
+            <xsd:element ref="tns:agency" maxOccurs="unbounded" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="agency">
+        <xsd:sequence>
+            <xsd:element name="id" type="xsd:unsignedLong"/>
+            <xsd:element name="company" type="xsd:string"/>
+            <xsd:element name="datum" type="xsd:string"/>
+            <xsd:element name="color">
+                <xsd:simpleType>
+                    <xsd:restriction  base="xsd:string">
+                        <xsd:enumeration value="green"/>
+                        <xsd:enumeration value="red"/>
+                        <xsd:enumeration value="yellow"/>
+                        <xsd:enumeration value="orange"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element name="ag_naam" type="xsd:string"/>
+            <xsd:element name="ag_adres" type="xsd:string"/>
+            <xsd:element name="ag_gemeente" type="xsd:string"/>
+            <xsd:element name="ag_postcode" type="xsd:string"/>
+            <xsd:element name="ag_telefoon" type="xsd:string"/>
+            <xsd:element name="ag_email" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>
