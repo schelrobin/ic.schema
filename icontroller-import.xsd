@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <xs:schema xmlns:import-helper="http://schema.icontroller.eu/import-helper" xmlns:language="http://schema.icontroller.eu/iso639" xmlns:currency="http://schema.icontroller.eu/iso4217" xmlns:country="http://www.codesynthesis.com/xmlns/xsstl" attributeFormDefault="qualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:import schemaLocation="http://schema.icontroller.eu/iso3166-country.xsd" namespace="http://www.codesynthesis.com/xmlns/xsstl" />
     <xs:import schemaLocation="http://schema.icontroller.eu/iso639-language.xsd" namespace="http://schema.icontroller.eu/iso639" />
@@ -68,6 +68,7 @@
                                         <xs:element name="birthplace" type="xs:string" minOccurs="0" maxOccurs="1" />
                                         <xs:element name="national_number" type="xs:positiveInteger" minOccurs="0" maxOccurs="1" />
                                         <xs:element name="portfolios" minOccurs="0" maxOccurs="1">
+                                        <xs:element name="failed" type="xs:boolean" minOccurs="0" maxOccurs="1" />
                                             <xs:complexType>
                                                 <xs:sequence>
                                                     <xs:element name="portfolio" type="xs:string" />
@@ -160,6 +161,7 @@
 										<xs:element name="extra_comment" type="xs:string" minOccurs="0" maxOccurs="1" />
 										<xs:element name="project" type="xs:string" minOccurs="0" maxOccurs="1" />
 										<xs:element name="payment_method" type="xs:string" minOccurs="0" maxOccurs="1" />
+                                        <xs:element name="document_type" type="xs:positiveInteger" minOccurs="0" maxOccurs="1" />
                                     </xs:all>
                                     <xs:attribute name="debtor_reference" type="xs:string" use="required" />
                                     <xs:attribute name="reference" type="xs:string" use="required" />
