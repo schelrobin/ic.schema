@@ -67,8 +67,8 @@
                                         <xs:element name="birthdate" type="xs:byte" minOccurs="0" maxOccurs="1" />
                                         <xs:element name="birthplace" type="xs:string" minOccurs="0" maxOccurs="1" />
                                         <xs:element name="national_number" type="xs:positiveInteger" minOccurs="0" maxOccurs="1" />
-                                        <xs:element name="portfolios" minOccurs="0" maxOccurs="1">
                                         <xs:element name="failed" type="xs:boolean" minOccurs="0" maxOccurs="1" />
+                                        <xs:element name="portfolios" minOccurs="0" maxOccurs="1">
                                             <xs:complexType>
                                                 <xs:sequence>
                                                     <xs:element name="portfolio" type="xs:string" />
