@@ -177,11 +177,13 @@
                                 <xs:complexType>
                                     <xs:all>
                                         <xs:element name="reference" type="xs:string" minOccurs="1" maxOccurs="1" />
+                                        <xs:element name="parent_reference" type="xs:string" minOccurs="0" maxOccurs="1" />
                                         <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1" />
                                         <xs:element name="email" type="import-helper:emailAddress" minOccurs="0" maxOccurs="1" />
                                         <xs:element name="tel" type="xs:string" minOccurs="0" maxOccurs="1" />
                                         <xs:element name="fax" type="xs:string" minOccurs="0" maxOccurs="1" />
                                         <xs:element name="language" type="language:ISOLanguageCodeType" minOccurs="1" maxOccurs="1" />
+                                        <xs:element name="type" type="xs:positiveInteger" minOccurs="0" maxOccurs="1" />
                                     </xs:all>
                                     <xs:attribute name="reference" type="xs:string" use="required" />
                                 </xs:complexType>
